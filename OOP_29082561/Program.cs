@@ -11,11 +11,7 @@ namespace OOP_29082561
         static void Main(string[] args)
         {
             //  2. instantiation of student
-            student stu1 = new student();
-            stu1.gender = "male";
-            stu1.SetName("Pakon");
-            stu1.SetGPA(3.5f);
-            stu1.setID("58030205");
+            student stu1 = new student("58030205", "Pakon", "male", 0.0f);
         }
     }
 
@@ -27,19 +23,13 @@ namespace OOP_29082561
         public string gender;
         private float gpa;
 
-        public void SetName(string name)
+        // Constructer
+        public student(string v1, string v2, string v3, float v4)
         {
-            this.name = name;
-        }
-
-        internal void SetGPA(float v)
-        {
-            throw new NotImplementedException();
-        }
-
-        internal void setID(string v)
-        {
-            throw new NotImplementedException();
+            this.id = v1;
+            this.name = v2;
+            this.gender = v3;
+            this.gpa = v4;
         }
     }
 }
